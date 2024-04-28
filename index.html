@@ -4,25 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>リダイレクトページ｜AppLii</title>
-    <link rel="icon" href="favicon.png" type="image/png" />
-    <meta http-equiv="refresh" content="3;url=https://applii.github.io/pages/" />
-    <style>
-      a{
-        margin: 4px;
-        padding: 2px 8px;
-        border-radius: 4px;
-        color: white;
-        background-color: #404040;
-        box-shadow: 4px 4px 4px #cecece;
-        white-space: nowrap;
-        text-decoration: none;
-      }
-      body{
-        color: #404040;
-        background-color: #f0f0f0;
-        font-size: 1.2rem;
-      }
-    </style>
+    <link rel="icon" href="./imgs/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" />
+
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-KQ3ZSCDG3B" async=""></script>
+    <script type="text/javascript" charset="utf-8">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-KQ3ZSCDG3B');
+    </script>
 
     <!-- 共通のOGP設定 -->
     <meta property="og:title" content="ホームページ｜AppLii" />
@@ -39,10 +30,166 @@
     <meta name="twitter:title" content="ホームページ｜AppLii" />
     <meta name="twitter:description" content="和歌山大学のクリエ「ITものづくりプロジェクトAppLii」ホームページ。活動状況やプロダクトに関する情報を公開しています。" />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/AppLii/AppLii.github.io/main/applii_ogp.png" />
+
+    <style>
+      body{
+        padding: 0;
+        margin: 0;
+        background-color: #f0f0f0;
+        color: #404040;
+        font-weight: 400;
+        font-family: 'Noto Sans JP', sans-serif;
+      }
+
+      #header{
+        height: calc(100vw * 870 / 1920);
+        max-height: 20rem;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #header div{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100vw * 870 / 1920);
+        max-height: 20rem;
+        position: absolute;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 5vw;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      #header img{
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+      }
+
+      h1{
+        text-align: center;
+      }
+
+      #main-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #main{
+        width: 100%;
+        max-width: 1280px;
+        padding: 0;
+        margin: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .content-box{
+        display: flex;
+        height: 100%;
+        width: 20rem;
+        min-height: 128px;
+        max-width: 20rem;
+        margin: 0.5rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        background-color: #404040;
+        box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 8px 0px;
+      }
+
+      .content-box:hover{
+        animation: scale 0.2s ease-in-out 0s 1 forwards;
+      }
+
+      @keyframes scale {
+        0% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(1.05);
+        }
+      }
+
+      .content-box img{
+        width: 30%;
+        height: 100%;
+        padding: 1rem;
+        text-align: center;
+        align-content: center;
+      }
+
+      .content-box .name{
+        width: 60%;
+        font-size: 1.2rem;
+        text-align: center;
+        align-content: center;
+        word-break: auto-phrase;
+      }
+
+      .content-box .arrow{
+        width: 10%;
+        font-size: 1.5rem;
+        text-align: center;
+        align-content: center;
+        border-left: 2px dashed white;
+        margin: 0.8rem 0;
+        padding: 0.2rem;
+      }
+
+      #footer{
+        text-align: center;
+        font-size: 0.8rem;
+        word-break: auto-phrase;
+      }
+    </style>
   </head>
   <body>
-    <h2>リダイレクトページ</h2>
-    <p>指定されたURLが間違っていたのかもしれません！3秒後に自動的にページが切り替わります。</p>
-    <p>切り替わらない場合は、<a href="https://applii.github.io/pages/">AppLiiホームページに移動する</a>をクリックしてください。</p>
+    <div id="header">
+      <img src="./imgs/raspi.png" alt="raspberry pi" />
+      <div>ITものづくりプロジェクト<br />AppLii</div>
+    </div>
+    <h1>リンク集</h1>
+    <div id="main-container">
+      <div id="main">
+        <a class="content-box" href="https://applii-wu.net/pages/" style="background-color: #009999">
+          <img src="./imgs/favicon.png" alt="icon" style="border-radius: 25%" />
+          <div class="name">AppLiiの<br />ホームページ</div>
+          <div class="arrow">></div>
+        </a>
+        <a class="content-box" href="https://applii-wu.net/pages/about-cafe-app" style="background-color: #ee7a00">
+          <img src="./imgs/cafe-app.png" alt="icon" />
+          <div class="name">大学食堂混雑度<br />アプリ<br />（準備中）</div>
+          <div class="arrow">></div>
+        </a>
+        <a class="content-box" href="https://twitter.com/applii_crea">
+          <img src="./imgs/twitter-logo.png" alt="icon" />
+          <div class="name">X（Twitter）</div>
+          <div class="arrow">></div>
+        </a>
+        <a class="content-box" href="https://github.com/AppLii">
+          <img src="./imgs/github-logo.png" alt="icon" />
+          <div class="name">GitHub</div>
+          <div class="arrow">></div>
+        </a>
+      </div>
+    </div>
+    <div id="footer">
+      このサイトの更新状況は、<a href="https://github.com/AppLii/AppLii.github.io/tree/main" target="_blank">GitHubリポジトリ</a>から確認できます。<br />
+      Copyright ©2024 AppLii, Wakayama Univ. All Rights Reserved.
+    </div>
   </body>
 </html>
